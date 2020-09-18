@@ -1,0 +1,70 @@
+* {
+  font-family: system-ui;
+}
+
+:root {
+  --theme-color: #b32020;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+header {
+  height: 60px;
+  background: #b32020;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  /* background: #b32020; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--theme-color);
+}
+
+/* .tabs {
+  height: 75px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+} */
+.tabs {
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.tab {
+  display: block;
+  flex-grow: 1;
+  text-align: center;
+  text-decoration: none;
+  color: var(--theme-color);
+  opacity: 0.6;
+}
+
+.tab.active {
+  opacity: 1;
+}
+
+.tab svg {
+  fill: var(--theme-color);
+  width: 32px;
+  height: 32px;
+}
+
+.tab p {
+  margin: 0;
+}
