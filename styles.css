@@ -1,9 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: system-ui;
 }
 
 :root {
   --theme-color: #b32020;
+  --navbar-height: 75px;
+  --header-height: 60px;
 }
 
 body {
@@ -15,7 +21,7 @@ h1 {
 }
 
 header {
-  height: 60px;
+  height: var(--header-height);
   background: #b32020;
   color: white;
   font-size: 20px;
@@ -41,7 +47,7 @@ nav {
   align-items: center;
 } */
 .tabs {
-  height: 75px;
+  height: var(--navbar-height);
   display: flex;
   align-items: center;
 }
@@ -67,4 +73,17 @@ nav {
 
 .tab p {
   margin: 0;
+}
+
+#screens {
+  height: calc(100vh - var(--navbar-height) - var(--header-height));
+  display: grid;
+  grid-template-columns: repeat(3, 100vw);
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+#screens .screen {
+  height: 100%;
+  scroll-snap-align: center;
 }
