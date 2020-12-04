@@ -87,3 +87,12 @@ nav {
   height: 100%;
   scroll-snap-align: center;
 }
+
+#screeninfo {
+  padding: 45px;
+  border-width: thin;
+  border-style: solid;
+  margin: 5px;
+  text-align: center;
+  border-color: var(--theme-color);
+}
